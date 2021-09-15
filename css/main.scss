@@ -1,0 +1,289 @@
+$colorOscuro: #6F69AC;
+$colorPrincipal: #95DAC1;
+$colorExtra:#FD6F96;
+$colorClaro: #FFEBA1;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Rubik', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: $colorOscuro;
+}
+header {
+    width: 100%;
+    height: 140px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.header-container{
+    width: 100%;
+    height: 50px;
+    display: grid;
+    background-color: $colorPrincipal;
+    &_icons{
+        width: 300px;
+        display: flex;
+        justify-self: flex-end;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 50px;
+        i {
+            font-size: 1.8rem;
+        }
+    }
+}
+nav {
+    height: 90px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 50px;
+    align-items: center;
+    .nav-profile{
+        display: flex;
+        justify-content: flex-end;
+        a{
+            font-size: 1.2rem;
+            border-bottom: 1px solid $colorOscuro;
+        }
+    }
+    .nav-logo img{
+        width: 50px;
+    }
+}
+.main-index{
+    width: 100vw;
+    position: absolute;
+    top: 140px;
+    bottom: 0;
+    overflow: hidden;
+}
+.img-container{
+    width: 100vw;
+    height: calc(100vh - 140px);
+    background-image: url("../assets/img/funda_wallpaper.png");
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    h1{
+        max-width: 750px;
+        grid-row: 1 / 2;
+        align-self: flex-end;
+        font-size: 2.8rem;
+        text-align: center;
+        color:$colorOscuro;
+    }
+    .button{
+        width: 150px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        align-self: flex-end;
+        justify-content: center;
+        justify-self: center;
+        font-size: 1.4rem;
+        font-weight: 600;
+        background-color: $colorClaro;
+        color: $colorOscuro;
+        border: 1px solid $colorOscuro;
+    }
+    .button:hover {
+        background-color: $colorPrincipal;
+        transform: scale(1.1);
+    }
+}
+.blog-principal{
+    width: 100%;
+    height: 400px;
+    padding: 30px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 35% 11% 35% 1fr;
+    background-color: $colorClaro;
+    color: $colorOscuro;
+}
+.blog-principal_img {
+    grid-column: 2 / 3;
+    h2 {
+        font-size: 2.4rem;
+    }
+    img {
+        width: 100%;
+    }
+    &--perfil{
+        grid-column: 2 / 3;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        justify-self: center;
+        overflow: hidden;
+        img{
+            width: 370px;
+            height: 300px;
+        }
+    }
+}
+.blog-principal_text {
+    grid-column: 4 / 5;
+    h3{
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    p{
+        font-size: 1rem;
+    }
+}
+
+.blogs_button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: $colorPrincipal;
+    color: $colorOscuro;
+    border: 1px solid $colorOscuro;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.blogs_button:hover {
+    background-color: $colorClaro;
+    transform: scale(1.1);
+}
+.blogs{
+    width: 100%;
+    display: flex;
+    margin-bottom: 30px;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+        width: 80%;
+        font-size: 2.4rem;
+        margin: 40px 0;
+        padding: 0 0 30px 0;
+        text-align: center;
+        color: $colorOscuro;
+        border-bottom: 1px solid $colorOscuro;
+    }
+    .container-all-blogs{
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 20px;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 30px;
+    }
+    .container-all-blogs--perfil{
+        @extend .container-all-blogs;
+        column-gap: 40px;
+        grid-template-rows: auto;
+    }
+}
+
+.blogs_container--img{
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 230px;
+    }
+
+}
+.blogs_container_text{
+    color: $colorOscuro;
+    h3 {
+        font-size: 2rem;
+        margin: 20px 0;
+    }
+    p{
+        text-align: justify;
+    }
+}
+
+footer{
+    width: 100%;
+    padding: 15px;
+    background-color: $colorOscuro;
+    color: $colorClaro;
+    border-top: 25px solid $colorPrincipal;
+    text-align: center;
+}
+.blog-container__img{
+    width: 100vw;
+    height: calc(100vh - 140px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: $colorClaro;
+    img{
+        width: 85%;
+    }
+}
+.blog-container__text{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 80% 1fr;
+    h3, h2, p {
+        grid-column: 2 / 3;
+        color: $colorOscuro;
+    }
+    h3{
+        margin:  40px 0 0;
+        padding: 0 0 30px;
+        font-size: 2rem;
+        border-bottom: 1px solid $colorOscuro;
+    }
+    h2 {
+        font-size: 2.4rem;
+        margin: 40px 0;
+    }
+    p{
+        margin-bottom: 15px;
+        text-align: justify;
+    }
+}
+.contacto-container{
+    @extend .blog-container__text;
+    height: 150px;
+    margin-top: 30px;
+    background-color: $colorClaro;
+    &_container{
+        grid-column: 2 / 3;
+        width: 90%;
+        display: flex;
+        justify-self: center;
+        .contacto {
+            width: 50%;
+            display: flex;
+            align-self: center;
+            img {
+                width: 70px;
+                margin-right: 15px;
+            }
+            &-text{
+                max-width: 300px;
+                a{
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    border-bottom: 1px solid $colorOscuro;
+                    margin-bottom: 15px;
+                    cursor: pointer;
+                }
+                p{
+                    margin: 15px 0 0 0;
+                }
+            }
+        }
+        .contribucion{
+            justify-content: flex-end;
+        }
+    }
+}

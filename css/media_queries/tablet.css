@@ -1,0 +1,23 @@
+@media (max-width: 1000px){
+    .blog-principal{
+        grid-template-columns: 15% 70% 15%;
+        height: auto;
+    }
+    .blog-principal_text{
+        grid-column: 2 / 3;
+    }
+    
+    .blogs .container-all-blogs{
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+    }
+    .container-all-blogs .blogs_container--img{
+        height: 200px;
+    }
+    .blogs_container__img {
+        height: 50vh;
+    }
+    .contacto-container_container .contacto-text p{
+        margin-right: 20px;
+    }
+}

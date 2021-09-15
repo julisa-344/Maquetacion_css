@@ -1,0 +1,5 @@
+@media (max-width: 600px){
+    .blogs .container-all-blogs{
+        grid-template-columns: 1fr;
+}
+}
